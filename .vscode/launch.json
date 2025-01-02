@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "lc206",
+            "request": "launch",
+            "mainClass": "lc206",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
             "name": "nqueens",
             "request": "launch",
             "mainClass": "nqueens",

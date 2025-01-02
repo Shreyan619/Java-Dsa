@@ -25,8 +25,8 @@ public class backtrack {
             for (int[] arr : path) {
                 System.err.println(Arrays.toString(arr));
             }
-            System.err.println(p);
-            System.err.println();
+            System.out.println(p);
+            System.out.println();
             return;
         }
         if (!maze[row][col]) {
