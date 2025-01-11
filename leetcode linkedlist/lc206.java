@@ -55,8 +55,7 @@ public class lc206 {
         }
         ListNode rev = reverse(head.next);
 
-        ListNode front = head.next;
-        front.next = head;
+        head.next.next = head;
         head.next = null;
         return rev;
     }
@@ -101,7 +100,7 @@ public class lc206 {
         list.display();
 
         // Reverse the list using recursion
-        list.head = list.reverseBetween(list.head, 2, 4);
+        list.head = list.reverse(list.head);
 
         // Display reversed list
         System.out.println("Reversed List:");
