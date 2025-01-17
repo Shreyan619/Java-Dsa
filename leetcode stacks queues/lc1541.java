@@ -34,16 +34,11 @@ public class lc1541 {
         // Test cases
         // String test1 = "(()))"; // Expected output: 1
         // String test2 = "))()("; // Expected output: 6
-        String test3 = "(((";   // Expected output: 6
-        // String test4 = "))";    // Expected output: 3
-        // String test5 = "";      // Expected output: 0
+        String test3 = "))()(";   // Expected output: 6
 
-        // Print results
         // System.out.println("Test case 1: " + test1 + " -> " + solution.minInsertions(test1));
         // System.out.println("Test case 2: " + test2 + " -> " + solution.minInsertions(test2));
         System.out.println("Test case 3: " + test3 + " -> " + solution.minInsertions(test3));
-        // System.out.println("Test case 4: " + test4 + " -> " + solution.minInsertions(test4));
-        // System.out.println("Test case 5: " + test5 + " -> " + solution.minInsertions(test5));
     }
 
 }
