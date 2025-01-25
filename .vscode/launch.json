@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "bt",
+            "request": "launch",
+            "mainClass": "binarytree.bt",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
+            "name": "bt",
+            "request": "launch",
+            "mainClass": "bt",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
+            "name": "fibo",
+            "request": "launch",
+            "mainClass": "fibo",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
             "name": "lc1541",
             "request": "launch",
             "mainClass": "lc1541",
