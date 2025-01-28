@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "zigzag",
+            "request": "launch",
+            "mainClass": "zigzag",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
             "name": "bt",
             "request": "launch",
             "mainClass": "binarytree.bt",
