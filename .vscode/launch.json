@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "lc226",
+            "request": "launch",
+            "mainClass": "lc226",
+            "projectName": "java proj_7272c5a1"
+        },
+        {
+            "type": "java",
             "name": "zigzag",
             "request": "launch",
             "mainClass": "zigzag",
