@@ -1,9 +1,9 @@
+// 114. Flatten Binary Tree to Linked List
 
 import java.util.Stack;
 
 import javax.swing.tree.TreeNode;
 
-// 114. Flatten Binary Tree to Linked List
 public class lc114 {
 
     public void flatten(TreeNode root) {
