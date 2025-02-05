@@ -69,8 +69,8 @@ public class hashmap<K, V> {
             buckets[i] = new LinkedList<>();
         }
 
-        for (int i = 0; i < oldBuckets.length; i++) {
-            for (Node node : oldBuckets[i]) {
+        for (LinkedList<Node> oldBucket : oldBuckets) {
+            for (Node node : oldBucket) {
                 put(node.key, node.value);
             }
         }
