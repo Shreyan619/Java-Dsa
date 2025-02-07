@@ -1,3 +1,4 @@
+//no of provinces
 
 public class lc547 {
 
