@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class lc994 {
+//only add rotten oranges to the queue when grid==2
 
     public int orangesRotting(int[][] grid) {
         int n = grid.length;
@@ -32,7 +33,7 @@ public class lc994 {
             boolean rotted = false;
 
             for (int i = 0; i < size; i++) {
-                int[] cell = queue.poll();
+                int[] cell = queue.poll(); // Get the rotten orange's position
                 int row = cell[0];
                 int col = cell[1];
 
@@ -41,7 +42,7 @@ public class lc994 {
                     int newCol = col + dcol[j];
                     if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m
                             && grid[newRow][newCol] == 1) {
-                        grid[newRow][newCol] = 2;
+                        grid[newRow][newCol] = 2; // Mark as rotten
                         queue.add(new int[]{newRow, newCol});
                         fresh--;
                         rotted = true;
