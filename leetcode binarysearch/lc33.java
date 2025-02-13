@@ -74,7 +74,7 @@ public class lc33 {
             if (arr[mid] < arr[mid + 1] && mid > start) {
                 return mid - 1;
             }
-            // if start=end=mid then kip duplicates
+            // if start=end=mid then skip duplicates
             if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
                 // skip the duplicates
                 // NOTE: what if these elements at start and end were the pivot??

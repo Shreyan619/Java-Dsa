@@ -30,7 +30,7 @@ public class lc1765 {
             for (int i = 0; i < 4; i++) {
                 int newRow = row + dRow[i];
                 int newCol = col + dCol[i];
-                if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && height[newRow][newCol] != -1) {
+                if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && height[newRow][newCol] == -1) {
                     height[newRow][newCol] = height[row][col] + 1;
                     q.offer(new int[]{newRow, newCol});
                 }
