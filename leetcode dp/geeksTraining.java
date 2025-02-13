@@ -34,4 +34,26 @@ public class geeksTraining {
         }
         return dp[day][last] = maxi;
     }
+
+    private int tab(int[][] arr) {
+        int n = arr.length;
+        int dp[][] = new int[n][4];
+        dp[0][0] = Math.max(arr[0][1], arr[0][2]);
+        dp[0][1] = Math.max(arr[0][0], arr[0][2]);
+        dp[0][2] = Math.max(arr[0][1], arr[0][0]);
+
+        for (int day = 1; day < n; day++) {
+            for (int last = 0; last < 3; last++) {
+                dp[day][last] = 0;
+
+                for (int task = 0; task < 3; task++) {
+                    if (task != last) {
+                        int activity = arr[day][task] + dp[day - 1][task];
+                        dp[day][last] = Math.max(dp[day][last], activity);
+                    }
+                }
+            }
+        }
+        return dp[n - 1][3];
+    }
 }
