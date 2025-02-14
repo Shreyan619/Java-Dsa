@@ -37,7 +37,7 @@ public class geeksTraining {
 
     private int tab(int[][] arr) {
         int n = arr.length;
-        int dp[][] = new int[n][4];
+        int dp[][] = new int[n][3];
         dp[0][0] = Math.max(arr[0][1], arr[0][2]);
         dp[0][1] = Math.max(arr[0][0], arr[0][2]);
         dp[0][2] = Math.max(arr[0][1], arr[0][0]);
@@ -54,6 +54,32 @@ public class geeksTraining {
                 }
             }
         }
-        return dp[n - 1][3];
+        //Return the best result on the last day
+        return Math.max(dp[n - 1][0], Math.max(dp[n - 1][1], dp[n - 1][2]));
+    }
+
+    private int Space(int[][] arr) {
+        int n = arr.length;
+        int prev[] = new int[3];
+        prev[0] = Math.max(arr[0][1], arr[0][2]);
+        prev[1] = Math.max(arr[0][0], arr[0][2]);
+        prev[2] = Math.max(arr[0][1], arr[0][0]);
+
+        for (int day = 1; day < n; day++) {
+            int temp[] = new int[3];
+            for (int last = 0; last < 3; last++) {
+                temp[last] = 0;
+
+                for (int task = 0; task < 3; task++) {
+                    if (task != last) {
+                        int activity = arr[day][task] + prev[task];
+                        temp[last] = Math.max(temp[last], activity);
+                    }
+                }
+            }
+            prev = temp;
+        }
+        //Return the best result on the last day
+        return Math.max(prev[0], Math.max(prev[1], prev[2]));
     }
 }
