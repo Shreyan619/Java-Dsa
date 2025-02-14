@@ -4,7 +4,7 @@ import java.util.*;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {5, 4, 3, 3, 2, 1};
         arr = mergeSort(arr);
         System.err.println(Arrays.toString(arr));
     }

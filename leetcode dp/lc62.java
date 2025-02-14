@@ -1,3 +1,5 @@
+//unique path
+// Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
 
 import java.util.Arrays;
 
@@ -50,9 +52,24 @@ public class lc62 {
         return dp[m - 1][n - 1];
     }
 
-    public static void main(String[] args) {
-        lc62 sol = new lc62();
-        System.out.println("Unique Paths (3x2): " + sol.uniquePaths(3, 2)); // Output: 3
-        System.out.println("Unique Paths (3x7): " + sol.uniquePaths(3, 7)); // Output: 28
+    private int sc(int m, int n) {
+        // Create an array to store the results for the previous row
+        int prev[] = new int[n];
+        for (int i = 0; i < m; i++) {
+            // Create a temporary array to store the results for the current row
+            int temp[] = new int[n];
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) {
+                    // Base condition: There's one way to reach the top-left cell (0, 0)
+                    temp[j] = 1;
+                } else {
+                    int up = prev[j];
+                    int left = temp[j - 1];
+                    temp[j] = up + left;
+                }
+            }
+            prev = temp;
+        }
+        return prev[n - 1];
     }
 }
