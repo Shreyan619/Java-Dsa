@@ -22,16 +22,4 @@ public class lc213 {
         }
         return prev;
     }
-
-    private int sc(int i, int j) {
-        if (i == 0 && j == 0) {
-            return 1;
-        }
-        if (i < 0 || j < 0) {
-            return 0;
-        }
-        int up = sc(i - 1, j);
-        int left = sc(i, j - 1);
-        return up + left;
-    }
 }
