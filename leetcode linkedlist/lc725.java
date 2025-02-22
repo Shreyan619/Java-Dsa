@@ -1,3 +1,4 @@
+//split ll into parts
 
 public class lc725 {
 
