@@ -1,5 +1,7 @@
-// 424. Longest Repeating Character Replacement
 
+import java.util.HashMap;
+
+// 424. Longest Repeating Character Replacement
 public class lc424 {
 
     public int characterReplacement(String s, int k) {
@@ -10,8 +12,8 @@ public class lc424 {
             map.put(c, map.getOrDefault(c, 0) + 1);
             maxFreq = Math.max(maxFreq, map.get(c));
             while ((right - left + 1) - maxFreq > k) {
-
-                map.put(left, map.get(s.charAt(left)) - 1);
+                char ch = s.charAt(left);
+                map.put(ch, map.get(s.charAt(ch)) - 1);
                 left++;
             }
             res = Math.max(res, right - left + 1);
