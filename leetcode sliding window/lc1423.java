@@ -19,7 +19,6 @@ public class lc1423 {
             leftSum -= cardPoints[k - 1 - i];    // Remove last element from left
             maxSum = Math.max(maxSum, leftSum + rightSum);
         }
-
         return maxSum;
     }
 }
