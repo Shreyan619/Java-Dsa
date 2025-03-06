@@ -5,5 +5,6 @@ public class lc1140 {
         for(int i=0;i<n;i++){
             sum[i]+=piles[i];
         }
+        
     }
 }
