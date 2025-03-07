@@ -32,4 +32,34 @@ public class lc84 {
         }
         return Math.max(max, area);
     }
+
+    //optimal approach efficient
+    public int largestRectangle(int[] heights) {
+        int n = heights.length;
+        int left[] = new int[n];
+        int right[] = new int[n];
+        Stack<Integer> st = new Stack<>();
+        for (int i = 0; i < n; i++) { // left part calculation
+            while (!st.isEmpty() && heights[st.peek()] >= heights[i]) {
+                st.pop();
+            }
+            left[i] = st.isEmpty() ? -1 : st.peek();
+            st.push(i);
+        }
+        st.clear(); // clear stack for right calc
+        for (int i = n - 1; i >= 0; i--) {
+            while (!st.isEmpty() && heights[st.peek()] >= heights[i]) {
+                st.pop();
+            }
+            right[i] = st.isEmpty() ? n : st.peek();
+            st.push(i);
+        }
+        int max = 0;
+        for (int i = 0; i < n; i++) {
+            int width = right[i] - left[i] - 1;
+            int area = heights[i] * width;
+            max = Math.max(max, area);
+        }
+        return max;
+    }
 }
