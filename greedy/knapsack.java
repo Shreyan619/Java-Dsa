@@ -12,7 +12,7 @@ public class knapsack {
             this.weight = wt;
         }
     }
-
+    // A Comparator<T> is an interface in Java used to define a custom comparison logic for sorting objects outside the class itself.
     static class ItemComparator implements Comparator<Item> {
 
         @Override
