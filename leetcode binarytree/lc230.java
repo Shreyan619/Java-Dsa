@@ -6,7 +6,7 @@ public class lc230 {
 
     private TreeNode helper(TreeNode node, int k) {
         if (node == null) {
-            return 0;
+            return null;
         }
         TreeNode left = helper(node.left, k);
         if (left != null) {
